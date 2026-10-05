@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Megatron | Guia detalhado de artefatos</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="side" aria-label="Navegação principal">
+        <div class="brand">Megatron</div>
+        <div class="sub">Hub de Inteligência · Arquitetura</div>
+        <div class="navtitle">Navegação</div>
+        <a href="#visao">Visão geral</a>
+        <a href="#escolha">Como escolher</a>
+        <a href="#mapa">Mapa visual</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#metodos">Métodos detalhados</a>
+        <a href="#frameworks">Frameworks</a>
+        <a href="#diagramas">Diagramas</a>
+        <a href="#conexoes">Conexões</a>
+        <a href="#qualidade">Qualidade</a>
+      </aside>
+
+      <main>
+        <header class="hero" id="visao">
+          <small>SISTEMA DE TRABALHO DA ARQUITETURA</small>
+          <h1>Guia detalhado dos artefatos.</h1>
+          <p>Uma versão visual e navegável com propósito, ciclo de vida, método, saídas, limites e relações entre os outputs produzidos pela Arquitetura.</p>
+        </header>
+
+        <div class="content">
+          <section class="section" id="escolha" aria-labelledby="titulo-escolha">
+            <h2 id="titulo-escolha">Comece pela pergunta</h2>
+            <p class="lead">Uma mesma iniciativa pode combinar vários artefatos em momentos diferentes.</p>
+            <div class="choice">
+              <div><b>Quais soluções existem?</b><br><a href="#mapa-de-solucoes">Mapa de Soluções</a></div>
+              <div><b>Quais capacidades precisamos?</b><br><a href="#mapa-de-capacidades">Mapa de Capacidades</a></div>
+              <div><b>Como nos comparamos?</b><br><a href="#benchmark">Benchmark</a></div>
+              <div><b>Quem existe no mercado?</b><br><a href="#vendor-landscape">Vendor Landscape</a></div>
+              <div><b>Qual a distância para o desejado?</b><br><a href="#estudo-de-gaps">Estudo de Gaps</a></div>
+              <div><b>Como está a maturidade?</b><br><a href="#heatmap">Heatmap</a></div>
+              <div><b>Quais caminhos são possíveis?</b><br><a href="#cenarios">Cenários</a></div>
+              <div><b>O que será afetado?</b><br><a href="#mapa-de-impacto">Mapa de Impacto</a></div>
+              <div><b>Como a arquitetura está ou ficará?</b><br><a href="#diagramas-arquitetura">Diagramas</a></div>
+              <div><b>Como realizar a mudança?</b><br><a href="#transformacoes">Transformações</a></div>
+              <div><b>O que foi decidido?</b><br><a href="#adr">ADR</a></div>
+              <div><b>Qual achado muda a leitura?</b><br><a href="#insight">Insight</a></div>
+            </div>
+          </section>
+
+          <section class="section" id="mapa">
+            <h2>Mapa visual dos artefatos</h2>
+            <p class="lead">Leitura por nível de detalhe e especificidade de domínio.</p>
+            <div class="map">
+              <div class="quad"><h3>Repertório transversal · detalhado</h3><span class="pill">Benchmark</span><span class="pill">Vendor Landscape</span><span class="pill p">Insight</span></div>
+              <div class="quad"><h3>Detalhe acionável · domínio específico</h3><span class="pill">Gaps</span><span class="pill">Heatmap</span><span class="pill">Cenários</span><span class="pill">Impacto</span><span class="pill o">Diagramas</span><span class="pill o">Transformações</span><span class="pill p">ADR</span></div>
+              <div class="quad"><h3>Linguagem comum · conceitual</h3><span class="pill g">Mapa de Capacidades</span></div>
+              <div class="quad"><h3>Leitura de um recorte</h3><span class="pill g">Mapa de Soluções</span></div>
+            </div>
+          </section>
+
+          <section class="section" id="metodos" aria-labelledby="titulo-metodos">
+            <h2 id="titulo-metodos">Métodos detalhados</h2>
+            <p class="lead">Abra cada artefato para consultar seu objetivo, método, saída esperada e limites.</p>
+            <div class="detailgrid">
+
+              <details id="mapa-de-solucoes" open>
+                <summary><div><span class="tag framework">Framework</span><h3>Mapa de Soluções</h3></div></summary>
+                <div class="body"><p><b>Objetivo:</b> registrar como capacidades se materializam no ecossistema real de soluções.</p><h4>Método</h4><ul><li>Definir objeto, domínio e fronteira.</li><li>Escolher profundidade uniforme: N1, N2 ou N3.</li><li>Usar um princípio de organização consistente.</li><li>Nomear e definir cada elemento.</li><li>Estabelecer fronteiras e relações.</li><li>Explicitar importância relativa.</li><li>Testar com casos reais.</li><li>Registrar procedência e relação com outros mapas.</li></ul><div class="call"><b>Teste de permanência:</b> continua válida se tecnologias, fornecedores ou times mudarem?</div></div>
+              </details>
+
+              <details id="benchmark"><summary><div><span class="tag">Análise</span><h3>Benchmark</h3></div></summary><div class="body"><p><b>Objetivo:</b> situar um objeto diante de referências comparáveis e identificar o que incorporar, usar como direção, perseguir ou evitar.</p><h4>Método</h4><ul><li>Definir objeto único e comparável.</li><li>Selecionar comparados e justificar a escolha.</li><li>Fixar critérios antes da coleta.</li><li>Buscar evidência com profundidade equivalente.</li><li>Registrar contexto, padrões e outliers.</li><li>Julgar o aproveitamento e consolidar findings.</li></ul><div class="call"><b>Saída:</b> padrões, diferenças, referências úteis, caminhos a evitar e questões em aberto.</div><div class="call warning"><b>Limite:</b> não substituir Vendor Landscape nem registrar uma decisão já tomada.</div></div></details>
+
+              <details id="estudo-de-gaps"><summary><div><span class="tag">Análise</span><h3>Estudo de Gaps</h3></div></summary><div class="body"><p><b>Objetivo:</b> dimensionar a distância entre atual e desejado, identificar causas e formular transformação candidata.</p><h4>Método</h4><ul><li>Declarar o referencial desejado.</li><li>Levantar estado atual com evidência.</li><li>Descrever o delta qualitativamente.</li><li>Nomear causas, severidade e dependências.</li><li>Estimar esforço.</li><li>Formular transformação candidata.</li></ul><div class="call"><b>Saída:</b> gap, causa, criticidade, esforço, dependências e ação candidata.</div></div></details>
+
+              <details id="heatmap"><summary><div><span class="tag">Análise</span><h3>Heatmap</h3></div></summary><div class="body"><p><b>Objetivo:</b> oferecer uma leitura evolutiva de saúde, maturidade e cobertura das entidades avaliadas.</p><h4>Método</h4><ul><li>Fixar universo e nível de detalhe.</li><li>Definir escala e critérios comuns.</li><li>Avaliar cada item com evidência.</li><li>Mapear cobertura por iniciativas.</li><li>Comparar ciclos equivalentes.</li><li>Entregar como insumo de priorização.</li></ul><div class="call warning"><b>Ciclo:</b> continua pontual, mesmo quando compara com uma edição anterior.</div></div></details>
+
+              <details id="cenarios"><summary><div><span class="tag">Análise</span><h3>Cenários</h3></div></summary><div class="body"><p><b>Objetivo:</b> tornar visíveis os ganhos e perdas de cada caminho possível.</p><h4>Método</h4><ul><li>Formular a decisão e o prazo.</li><li>Enumerar opções genuinamente viáveis.</li><li>Separar premissas de fatos.</li><li>Definir critérios e pesos antes da avaliação.</li><li>Comparar custo, lock-in, reversibilidade, velocidade e risco.</li><li>Declarar perdas e condições de reversão.</li></ul><div class="call"><b>Próximo passo:</b> quando houver escolha, registrar em ADR.</div></div></details>
+
+              <details id="insight"><summary><div><span class="tag">Análise</span><h3>Insight</h3></div></summary><div class="body"><p><b>Objetivo:</b> capturar uma constatação não óbvia que altera entendimento, prioridade ou decisão.</p><h4>Método</h4><ul><li>Fazer varredura ampla.</li><li>Buscar padrão revelado pelo cruzamento.</li><li>Aplicar teste de interesse da fonte.</li><li>Classificar maturidade do sinal.</li><li>Derivar consequência ou pergunta acionável.</li></ul><div class="call warning"><b>Teste:</b> se uma única fonte já afirma, é citação, não insight.</div></div></details>
+
+              <details id="mapa-de-impacto"><summary><div><span class="tag">Análise</span><h3>Mapa de Impacto</h3></div></summary><div class="body"><p><b>Objetivo:</b> rastrear a propagação de uma mudança pela arquitetura, áreas e governança.</p><h4>Método</h4><ul><li>Caracterizar o gatilho.</li><li>Localizar o primeiro ponto atingido.</li><li>Percorrer capacidades, soluções, dados e processos.</li><li>Classificar impactos diretos, indiretos e de segunda ordem.</li><li>Nomear afetados e não-impactos.</li><li>Definir sinais de monitoramento.</li></ul><div class="call warning"><b>Limite:</b> mostra propagação; não substitui plano de transformação.</div></div></details>
+
+              <details id="vendor-landscape"><summary><div><span class="tag">Análise</span><h3>Vendor Landscape</h3></div></summary><div class="body"><p><b>Objetivo:</b> mapear players, diferenciações, agrupamentos, lacunas e implicações de uma categoria.</p><h4>Método</h4><ul><li>Delimitar a vertical.</li><li>Definir critérios de diferenciação.</li><li>Levantar fichas dos players com origem e data.</li><li>Agrupar por posicionamento.</li><li>Interpretar dominância, emergentes e white spaces.</li></ul><div class="call warning"><b>Limite:</b> não transformar o landscape em recomendação de fornecedor.</div></div></details>
+
+              <details id="mapa-de-capacidades"><summary><div><span class="tag framework">Framework</span><h3>Mapa de Capacidades</h3></div></summary><div class="body"><p><b>Objetivo:</b> representar habilidades permanentes necessárias para produzir resultados.</p><h4>Método</h4><ul><li>Definir objeto, domínio e fronteira.</li><li>Escolher profundidade uniforme: N1, N2 ou N3.</li><li>Usar um princípio de organização consistente.</li><li>Nomear e definir cada elemento.</li><li>Estabelecer fronteiras e relações.</li><li>Explicitar importância relativa.</li><li>Testar com casos reais.</li><li>Registrar procedência e relação com outros mapas.</li></ul><div class="call"><b>Teste de permanência:</b> continua válida se tecnologias, fornecedores ou times mudarem?</div></div></details>
+
+              <details id="diagramas-arquitetura"><summary><div><span class="tag arch">Arquitetura</span><h3>Diagramas de Arquitetura</h3></div></summary><div class="body"><p><b>Objetivo:</b> representar componentes, relações, fluxos, tecnologias, escopos e restrições.</p><h4>Método</h4><ul><li>Delimitar recorte e gatilho.</li><li>Identificar e descrever componentes.</li><li>Explicitar relações, dados e serviços.</li><li>Declarar fronteiras e restrições.</li><li>Indicar tecnologias relevantes.</li><li>Diferenciar Referência, AS-IS, TO-BE ou Fluxo.</li><li>Construir hierarquia e direção visual.</li><li>Registrar uso esperado, fontes e data.</li></ul><div class="call"><b>Princípio:</b> o desenho mostra onde; a descrição explica por que existe e como interpretar.</div></div></details>
+
+              <details id="transformacoes"><summary><div><span class="tag other">Mudança</span><h3>Transformações</h3></div></summary><div class="body"><p><b>Objetivo:</b> tornar viável a passagem do estado atual para um futuro desejado.</p><h4>Método</h4><ul><li>Delimitar o objeto.</li><li>Levantar AS-IS com evidência.</li><li>Explicitar restrições.</li><li>Declarar ambição do TO-BE.</li><li>Explorar opções distintas.</li><li>Avaliar esforço, prazo, custo e risco.</li><li>Mapear dependências e transição.</li><li>Nomear responsáveis e critérios de conclusão.</li></ul><div class="call"><b>Saída:</b> escopo, horizonte, esforço, dependências, capacidades afetadas e gap de origem.</div></div></details>
+
+              <details id="adr"><summary><div><span class="tag other">Decisão</span><h3>ADR</h3></div></summary><div class="body"><p><b>Objetivo:</b> preservar o raciocínio de uma decisão arquitetural relevante.</p><h4>Método</h4><ul><li>Nomear uma única decisão.</li><li>Declarar status.</li><li>Descrever contexto e problema.</li><li>Registrar critérios e alternativas.</li><li>Enunciar decisão e aprovadores.</li><li>Explicitar consequências.</li><li>Definir condições de revisão.</li><li>Relacionar evidências e publicar metadados.</li></ul><div class="call warning"><b>Limite:</b> não é ata; mudança de decisão exige novo ADR.</div></div></details>
+            </div>
+          </section>
+
+          <section class="section" id="frameworks">
+            <h2>Como definir e representar capacidades</h2>
+            <p class="lead">A capacidade descreve o que a organização precisa ser capaz de fazer, sem antecipar implementação.</p>
+            <div class="two">
+              <div class="panel">
+                <h3>Descrição mínima</h3>
+                <div class="check"><b>Nome</b> como conceito permanente e reconhecível.</div>
+                <div class="check"><b>Propósito</b> começando por “Permite que a organização…”.</div>
+                <div class="check"><b>Valor de negócio</b> expresso em resultado, não tecnologia.</div>
+              </div>
+              <div class="panel">
+                <h3>Representação visual</h3>
+                <p>O tamanho comunica importância relativa na narrativa do framework. O critério pode ser importância estratégica, impacto, diferenciação, geração de valor ou centralidade.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section" id="qualidade">
+            <h2>Padrão mínimo e qualidade</h2>
+            <div class="two">
+              <div class="panel"><h3>Campos mínimos</h3><p>Definição, objetivo, objeto, recorte, público-alvo, perguntas, entradas, saídas, fontes, método, limites e critérios de qualidade.</p></div>
+              <div class="panel"><h3>Validação</h3><div class="check">Responde à pergunta original.</div><div class="check">Objeto e recorte estão claros.</div><div class="check">Fontes são rastreáveis.</div></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
