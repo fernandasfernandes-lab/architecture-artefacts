@@ -8,12 +8,12 @@ Este repositório contém uma apresentação estática em HTML que organiza os a
 
 A principal página é:
 
-- [outputs-artefacts.html](outputs-artefacts.html)
+- [front/index.html](front/index.html)
 
-Os arquivos de estilo e comportamento estão separados para manter a manutenção mais simples:
+A estrutura foi organizada para separar a camada de apresentação dos ativos estáticos:
 
-- [styles.css](styles.css)
-- [script.js](script.js)
+- [front/css/styles.css](front/css/styles.css)
+- [front/js/script.js](front/js/script.js)
 
 ## Funcionalidades
 
@@ -29,11 +29,15 @@ Os arquivos de estilo e comportamento estão separados para manter a manutençã
 ```text
 architecture-artefacts/
 ├── README.md
-├── outputs-artefacts.html
+├── index.html
+├── front/
+│   ├── index.html
+│   ├── css/
+│   │   └── styles.css
+│   └── js/
+│       └── script.js
 ├── outputs-artefacts-fixed.html
 ├── rewrite_html.ps1
-├── script.js
-├── styles.css
 └── .gitignore (se existir no repositório)
 ```
 
@@ -41,7 +45,7 @@ architecture-artefacts/
 
 ### Opção 1: abrir diretamente no navegador
 
-Basta abrir o arquivo [outputs-artefacts.html](outputs-artefacts.html) em qualquer navegador moderno.
+Basta abrir o arquivo [front/index.html](front/index.html) em qualquer navegador moderno.
 
 ### Opção 2: servir localmente
 
@@ -54,7 +58,7 @@ python -m http.server 8000
 Em seguida, acesse:
 
 ```text
-http://localhost:8000
+http://localhost:8000/front/index.html
 ```
 
 ## Sobre os artefatos documentados
